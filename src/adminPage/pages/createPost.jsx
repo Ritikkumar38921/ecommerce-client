@@ -83,7 +83,7 @@ const CreatePost = () => {
         let formdata = new FormData(fdata);
 
         create(formdata);
-        window.location.href = "https://ritik-ecommerce-website.herokuapp.com/";
+        window.location.href = "https://ritik-ecommerce-website.netlify.app/";
         
     }
 

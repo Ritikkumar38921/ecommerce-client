@@ -112,11 +112,11 @@ const Navbar = () => {
                 <Center><Logo>Ecommerce</Logo></Center>
                 <Right>
                     <Div>
-                        { isAdmin && <Link to={`/admin/createpost`}><MenuItem >Createpost</MenuItem></Link>}
-                        <Link to={"/login"}><MenuItem>Sign In</MenuItem></Link>
+                        { isAdmin && <Link to={`https://ritik-ecommerce-website.netlify.app/admin/createpost`}><MenuItem >Createpost</MenuItem></Link>}
+                        <Link to={"https://ritik-ecommerce-website.netlify.app/login"}><MenuItem>Sign In</MenuItem></Link>
                     </Div>
                     <Div>
-                        <Link to={"/cart"}>
+                        <Link to={"https://ritik-ecommerce-website.netlify.app/cart"}>
                         <MenuItem>
                                 <Badge badgeContent={quantity} color="primary"  >
                                     <ShoppingCartOutlined style={{cursor:"pointer"}}/>

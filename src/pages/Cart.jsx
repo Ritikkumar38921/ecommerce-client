@@ -169,7 +169,6 @@ const Bottom = styled.div`
 const Cart = () => {
     var ele;
     let dispatch = useDispatch();
-    const [Data,setData] = useState({});
     let cart = useSelector(state => state.cart);
     // console.log(cart);
     // const [stripeToken,setStripeToken] = useState(null);
@@ -195,7 +194,7 @@ const Cart = () => {
             // console.log("success");
             console.log(response)
             dispatch(addOrder(newObj));
-        }).catch((err) => window.location.href = "https://ritik-ecommerce-website.herokuapp.com/");
+        }).catch((err) => window.location.href = "https://ritik-ecommerce-website.netlify.app/");
 
         
     }
@@ -292,7 +291,7 @@ const Cart = () => {
 
         const goTOHomePage = () => {
             // console.log("go to home page" );
-            window.location.href = "https://ritik-ecommerce-website.herokuapp.com/";
+            window.location.href = "https://ritik-ecommerce-website.netlify.app/";
         }
 
     return (
@@ -308,7 +307,7 @@ const Cart = () => {
                         <TopText>Shopping Bag(2)</TopText>
                         <TopText>Your Wishlist(0)</TopText>
                     </TopTexts>
-                    <Link to={`/user/orders`}>
+                    <Link to={`https://ritik-ecommerce-website.netlify.app/user/orders`}>
                         <TopButton type="filled">Orders</TopButton>
                     </Link>
                 </Top>
@@ -362,7 +361,7 @@ const Cart = () => {
                             <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
                         </SummaryItem>
                         <StripeCheckout
-                            name="Lama Shop"
+                            name="Ritik Shop"
                             // image="https://avatars.githubusercontent.com/u/1486366?v=4</Summary>"
                             billingAddress
                             shippingAddress

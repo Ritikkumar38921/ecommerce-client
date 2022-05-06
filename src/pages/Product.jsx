@@ -10,7 +10,6 @@ import { useParams } from "react-router-dom";
 import {publicRequest,userRequest} from "../requestMethods";
 import {useDispatch, useSelector} from "react-redux";
 import { addProduct } from "../redux/cartRedux";
-import axios from "axios";
 
 const Container = styled.div``;
 
@@ -123,8 +122,6 @@ const Button = styled.button`
 
 const Product = () => {
     let {id} = useParams();
-    // console.log(id);
-    // console.log("hey");
     let cart = useSelector((state) => state.cart);
     const [product,setProduct] = useState({});
     const [quantity,setQuantity] = useState(1);
@@ -141,11 +138,11 @@ const Product = () => {
                
                 
                 // window.location.href = "http://localhost:3000/"
-                var prod = await publicRequest.get(`products/find/${id}`);
+                var prod = await publicRequest.get(`/products/find/${id}`);
                 // console.log(prod);
                setProduct(prod.data);
             } catch (error) {
-                window.location.href = "https://ritik-ecommerce-website.herokuapp.com/";
+                window.location.href = "https://ritik-ecommerce-website.netlify.app/";
                 // console.log(error); 
             }
         }

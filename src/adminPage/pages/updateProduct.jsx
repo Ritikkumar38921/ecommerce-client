@@ -82,7 +82,7 @@ const UpdateProduct = () => {
     const update = async(e) => {
         e.preventDefault();
         try{
-            let up_prod = await userRequest.put(`products/${id}`,{size,color,inStock,price});
+            let up_prod = await userRequest.put(`/products/${id}`,{size,color,inStock,price});
             console.log(up_prod);
             let newArray = [...cart.products];
             dispatch(updateproduct({products:newArray,quantity:cart.quantity,total:cart.total,ID:id,price:price}));
@@ -91,7 +91,7 @@ const UpdateProduct = () => {
             console.log("something went wrong while updating the product by admin");
             console.log(err);
         }
-        window.location.href = "https://ritik-ecommerce-website.herokuapp.com/";
+        window.location.href = "https://ritik-ecommerce-website.netlify.app/";
     }
 
     return (

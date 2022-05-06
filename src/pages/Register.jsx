@@ -76,10 +76,10 @@ const Register = () => {
             localStorage.setItem('userId',JSON.stringify(res.data._id));
             // console.log(res);
             login(dispatch,{username,password});
-            window.location.href = "https://ritik-ecommerce-website.herokuapp.com/";
+            window.location.href = "https://ritik-ecommerce-website.netlify.app/";
            
         }catch(err){
-            window.location.href = "https://ritik-ecommerce-website.herokuapp.com/";
+            window.location.href = "https://ritik-ecommerce-website.netlify.app/";
             // console.log("there exist an error........");
         }
     }

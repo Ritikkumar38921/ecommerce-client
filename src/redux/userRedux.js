@@ -17,7 +17,7 @@ const userSlice = createSlice({
             state.isFetching = false;
             state.currentUser = action.payload;
             localStorage.setItem("userLogin",JSON.stringify(state.currentUser));
-            window.location.href = "https://ritik-ecommerce-website.herokuapp.com/";
+            window.location.href = "https://ritik-ecommerce-website.netlify.app/";
         },
         loginFailure : (state) => {
             state.isFetching = false;

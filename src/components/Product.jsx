@@ -73,12 +73,12 @@ const Product = ({item}) => {
             { !item.img.startsWith("http") && <Image src={`https://ritik-ecommerce-website.herokuapp.com/${item.img}`} />}
             <Info>
                 <Icon>
-                    <Link to={'/cart'}>
+                    <Link to={'https://ritik-ecommerce-website.netlify.app/cart'}>
                         <ShoppingCartOutlined/>
                     </Link>
                 </Icon>
                 <Icon>
-                    <Link to={`/product/${item._id}`}>
+                    <Link to={`https://ritik-ecommerce-website.netlify.app/product/${item._id}`}>
                         <SearchOutlined/>
                     </Link>
                 </Icon>

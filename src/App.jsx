@@ -19,7 +19,8 @@ const App = () => {
   
   return <Router>
     <Routes>
-      <Route path="/" element={ login ? <Home/> : <Navigate to={"/login"} replace={true} />} />
+    {/* login ? : <Navigate to={"/login"} replace={true} /> */}
+      <Route path="/" element={<Home/>} />
       <Route path="/products/:category" element={<ProductList/>}></Route>
       <Route path="/product/:id" element={<Product/>}></Route>
       <Route path="/cart" element={<Cart/>}></Route>

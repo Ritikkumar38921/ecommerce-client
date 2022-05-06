@@ -89,7 +89,7 @@ const Login = () => {
                     {error && <Error>Something went wrong</Error>}
 
                     <Link>Do Not You Remember The Password?</Link>
-                    <Link href="/register">Create A New Account</Link>
+                    <Link href="https://ritik-ecommerce-website.netlify.app/register">Create A New Account</Link>
                 </Form>
             </Wrapper>
         </Container>
