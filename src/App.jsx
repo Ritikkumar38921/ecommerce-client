@@ -19,7 +19,7 @@ const App = () => {
   
   return <Router>
     <Routes>
-    {login !== null ? <Navigate to={"/"} replace={true}/> : <Navigate to={"/login"} replace={true} />}
+    {/* {login !== null ? <Navigate to={"/"} replace={true}/> : <Navigate to={"/login"} replace={true} />} */}
       <Route path="/" element={login ? <Home/> : <Navigate to={"/login"} replace={true}/>}></Route>
       <Route path="/products/:category" element={<ProductList/>}></Route>
       <Route path="/product/:id" element={<Product/>}></Route>
