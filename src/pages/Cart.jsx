@@ -194,7 +194,7 @@ const Cart = () => {
             // console.log("success");
             console.log(response)
             dispatch(addOrder(newObj));
-        }).catch((err) => window.location.href = "https://ritik-ecommerce-website.netlify.app/");
+        }).catch((err) => window.location.href = "/");
 
         
     }
@@ -291,7 +291,9 @@ const Cart = () => {
 
         const goTOHomePage = () => {
             // console.log("go to home page" );
-            window.location.href = "https://ritik-ecommerce-website.netlify.app/";
+            window.location.href = "/";
+
+            // window.location.href = "https://ritik-ecommerce-website.netlify.app/";
         }
 
     return (
@@ -307,7 +309,7 @@ const Cart = () => {
                         <TopText>Shopping Bag(2)</TopText>
                         <TopText>Your Wishlist(0)</TopText>
                     </TopTexts>
-                    <Link to={`https://ritik-ecommerce-website.netlify.app/user/orders`}>
+                    <Link to={`/user/orders`}>
                         <TopButton type="filled">Orders</TopButton>
                     </Link>
                 </Top>

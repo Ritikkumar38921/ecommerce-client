@@ -25,7 +25,7 @@ const Products = ({cat,filters,sort}) => {
     useEffect(()=>{
         const getProducts = async() => {
             try{
-                let res = (cat) ? await publicRequest.get(`https://ritik-ecommerce-website.netlify.app/products?category=${cat}`) : await publicRequest.get(`https://ritik-ecommerce-website.netlify.app/products/`);
+                let res = (cat) ? await publicRequest.get(`/products?category=${cat}`) : await publicRequest.get(`/products/`);
                 setProducts((prev) => [...res.data])
             }catch(err){
                 console.log(err);
@@ -67,7 +67,7 @@ const Products = ({cat,filters,sort}) => {
             console.log("you are not able to delete the products .");
             console.log(error);
         }
-        window.location.href = "https://ritik-ecommerce-website.netlify.app/";
+        window.location.href = "/";
     }
 
     // console.log(products);
@@ -78,7 +78,7 @@ const Products = ({cat,filters,sort}) => {
                 filteredProducts.map((item) => ( <div key={item._id}>
                 <Product key={item._id} item={item}/>
                 <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-                    <Link to={`https://ritik-ecommerce-website.netlify.app/admin/update/${item._id}`}>
+                    <Link to={`/admin/update/${item._id}`}>
                         <button style={{color:"white",backgroundColor:"yellow",padding:"10px",fontWeight:"600",cursor:"pointer",width:"65px",marginRight:"7px"}}>Edit</button>
                     </Link>
                     <button style={{color:"white",backgroundColor:"red",padding:"10px",fontWeight:"600",cursor:"pointer",width:"65px",marginRight:"7px"}} onClick={(e) => deleteProduct(e,item._id)}>Delete</button>
@@ -88,7 +88,7 @@ const Products = ({cat,filters,sort}) => {
                 <Product key={item._id} item={item} />
                 {/* {console.log(item._id)} */}
                 <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-                    { isAdmin && <Link to={`https://ritik-ecommerce-website.netlify.app/admin/update/${item._id}`}>
+                    { isAdmin && <Link to={`/admin/update/${item._id}`}>
                             <button style={{color:"white",backgroundColor:"yellow",padding:"10px",fontWeight:"600",cursor:"pointer",width:"65px",marginRight:"7px"}}>Edit</button>
                         </Link>
                     }

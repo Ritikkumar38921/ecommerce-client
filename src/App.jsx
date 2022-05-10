@@ -19,7 +19,7 @@ const App = () => {
   
   return <Router>
     <Routes>
-    {/* login ? : <Navigate to={"/login"} replace={true} /> */}
+    login ? : <Navigate to={"/login"} replace={true} />
       <Route path="/" element={login ? <Home/> : <Navigate to={"/login"} replace={true}/>}></Route>
       <Route path="/products/:category" element={<ProductList/>}></Route>
       <Route path="/product/:id" element={<Product/>}></Route>
@@ -29,8 +29,8 @@ const App = () => {
       <Route path="/admin/createpost" element={<CreatePost/>}></Route>
       <Route path="/admin/update/:id" element={<UpdateProduct/>}></Route>
       <Route path="/user/orders" element={<Orders/>}></Route>
-      {/* <Route path="/allproducts" element={<Prods/>}></Route> */}
-      {/* <Route path="/admin/Login" element={<AdminLogin/>}></Route> */}
+      <Route path="/allproducts" element={<Prods/>}></Route>
+      <Route path="/admin/Login" element={<AdminLogin/>}></Route>
     </Routes>
   </Router>
  

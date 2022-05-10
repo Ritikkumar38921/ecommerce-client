@@ -54,7 +54,8 @@ const Orders = () => {
     }
 
     return <>
-    <Link to={'https://ritik-ecommerce-website.netlify.app/'}>
+    <Link to={'/'}>
+    {/* <Link to={'https://ritik-ecommerce-website.netlify.app/'}> */}
         <button style={{padding:"10px",color:"white",backgroundColor:"red",borderRadius:"10px",cursor:"pointer",margin:"10px"}}>Home</button>
     </Link>
     <div style={{display:"flex",flexDirection:"column"}}>

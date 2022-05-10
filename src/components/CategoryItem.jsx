@@ -46,7 +46,7 @@ const Button = styled.button`
 const CategoryItem = ({item}) => {
     return (
         <Container>
-            <Link to={`https://ritik-ecommerce-website.netlify.app/products/${item.cate}`}>
+            <Link to={`/products/${item.cate}`}>
             <Image src={item.img}/>
             <Info>
                 <Title>{item.title}</Title>

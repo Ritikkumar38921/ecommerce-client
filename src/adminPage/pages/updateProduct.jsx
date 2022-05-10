@@ -91,7 +91,7 @@ const UpdateProduct = () => {
             console.log("something went wrong while updating the product by admin");
             console.log(err);
         }
-        window.location.href = "https://ritik-ecommerce-website.netlify.app/";
+        window.location.href = "/";
     }
 
     return (

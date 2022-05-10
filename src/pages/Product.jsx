@@ -142,7 +142,9 @@ const Product = () => {
                 // console.log(prod);
                setProduct(prod.data);
             } catch (error) {
-                window.location.href = "https://ritik-ecommerce-website.netlify.app/";
+                // window.location.href = "https://ritik-ecommerce-website.netlify.app/";
+                window.location.href = "/";
+                
                 // console.log(error); 
             }
         }
